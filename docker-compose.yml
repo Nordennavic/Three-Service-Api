@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  erthsobesservice:
+    image: erthsobes/erthsobesservis
+    build:
+      context: .
+      dockerfile: erthsobesservice/Dockerfile
+    ports:
+      - "6500:6500"
+
+  erthsobes-db:
+    image: erthsobes/erthsobes-db
+    environment:  
+      - POSTGRES_USER=orders
+      - POSTGRES_PASSWORD=orders
+      - POSTGRES_DB=orders
+    build:
+      context: .
+      dockerfile: erthsobes-db/Dockerfile
+    ports:
+      - "5432:5432"
+

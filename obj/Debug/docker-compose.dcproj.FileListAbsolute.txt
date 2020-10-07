@@ -1,0 +1,12 @@
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\appsettings.Development.json
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\appsettings.json
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Properties\launchSettings.json
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\erthsobesservice.exe
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\erthsobes-db.exe
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\erthsobes-db.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\erthsobesservice.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\erthsobesservice.pdb
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\erthsobes-db.pdb
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\obj\Debug\docker-compose.dcprojAssemblyReference.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\obj\Debug\docker-compose.dcproj.CopyComplete

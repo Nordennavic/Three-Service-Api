@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "grOVN4DvJkT1CKkAV4/GEba8l57F3VsvWU2pCFD9ghaORkYONoaMtDxIdiQCOk3XoM5Zed2rQJS0R1D2PTMZxQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Denis\\Documents\\GitHub\\Three-Services-Api\\erthsobesservice\\erthsobesservice.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Denis\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512"
+  ],
+  "logs": []
+}
