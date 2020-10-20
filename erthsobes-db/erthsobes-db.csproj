@@ -5,6 +5,7 @@
     <RootNamespace>erthsobes_db</RootNamespace>
     <UserSecretsId>28df4501-8be2-47c7-b9a3-365ede020996</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileRunArguments>-p 5432:5432</DockerfileRunArguments>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 

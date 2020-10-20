@@ -17,3 +17,4 @@ C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-db\obj\Debug\netcor
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-db\obj\Debug\netcoreapp3.1\erthsobes-db.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-db\obj\Debug\netcoreapp3.1\erthsobes-db.pdb
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-db\obj\Debug\netcoreapp3.1\erthsobes-db.genruntimeconfig.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-db\obj\Debug\netcoreapp3.1\erthsobes-db.csprojAssemblyReference.cache

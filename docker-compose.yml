@@ -3,15 +3,24 @@ version: '3.4'
 services:
   erthsobesservice:
     image: erthsobes/erthsobesservis
+    environment:
+      - DOTNET_RUNNING_IN_CONTAINER=true
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:6500
     build:
       context: .
       dockerfile: erthsobesservice/Dockerfile
     ports:
       - "6500:6500"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
 
   erthsobes-db:
     image: erthsobes/erthsobes-db
     environment:  
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5432
       - POSTGRES_USER=orders
       - POSTGRES_PASSWORD=orders
       - POSTGRES_DB=orders
@@ -20,4 +29,8 @@ services:
       dockerfile: erthsobes-db/Dockerfile
     ports:
       - "5432:5432"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
 

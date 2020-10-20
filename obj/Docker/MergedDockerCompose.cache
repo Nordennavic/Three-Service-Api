@@ -5,33 +5,30 @@ services:
       dockerfile: erthsobes-db/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_URLS: https://+:443;http://+:80
+      ASPNETCORE_URLS: http://+:5432
       POSTGRES_DB: orders
       POSTGRES_PASSWORD: orders
       POSTGRES_USER: orders
     image: erthsobes/erthsobes-db
     ports:
-    - target: 80
-    - target: 443
     - published: 5432
       target: 5432
     volumes:
-    - C:\Users\Denis\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
     - C:\Users\Denis\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\Denis\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
   erthsobesservice:
     build:
       context: C:\Users\Denis\Documents\GitHub\Three-Services-Api
       dockerfile: erthsobesservice/Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_URLS: https://+:443;http://+:80
+      ASPNETCORE_URLS: http://+:6500
+      DOTNET_RUNNING_IN_CONTAINER: "true"
     image: erthsobes/erthsobesservis
     ports:
-    - target: 80
-    - target: 443
     - published: 6500
       target: 6500
     volumes:
-    - C:\Users\Denis\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
     - C:\Users\Denis\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\Denis\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
 version: '3.4'
