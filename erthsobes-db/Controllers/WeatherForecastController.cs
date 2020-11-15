@@ -36,4 +36,24 @@ namespace erthsobes_db.Controllers
             .ToArray();
         }
     }
+
+    [Route("api/[controller]")]
+    public class OrderController : ControllerBase
+    {
+        [HttpGet]
+        public string Get()
+        {
+            return "All works!";
+        }
+    }
+
+    [Route("api/[controller]")]
+    public class OrdersController : ControllerBase
+    {
+        [HttpGet]
+        public string Get()
+        {
+            return "Orders all works!";
+        }
+    }
 }

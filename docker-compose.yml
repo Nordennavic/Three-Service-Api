@@ -1,6 +1,7 @@
-version: '3.4'
+version: '3.8'
 
 services:
+#Сторонняя система
   erthsobesservice:
     image: erthsobes/erthsobesservis
     environment:
@@ -12,10 +13,7 @@ services:
       dockerfile: erthsobesservice/Dockerfile
     ports:
       - "6500:6500"
-    volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
-
+#База данных
   erthsobes-db:
     image: erthsobes/erthsobes-db
     environment:  
@@ -27,10 +25,21 @@ services:
     build:
       context: .
       dockerfile: erthsobes-db/Dockerfile
+    volumes:
+      - .db:/var/lib/postgresql/data:rw
     ports:
       - "5432:5432"
-    volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+#Api для взаимодействия с базой данных
+  erthsobes-api:
+    image: erthsobes/erthsobes-api
+    environment:
+      - DOTNET_RUNNING_IN_CONTAINER=true
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:6570
+    build:
+      context: .
+      dockerfile: erthsobes-api/Dockerfile
+    ports:
+      - "6570:6570"
 
 
