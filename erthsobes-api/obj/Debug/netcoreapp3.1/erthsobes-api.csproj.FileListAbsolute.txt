@@ -34,8 +34,11 @@ C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api\bin\Debug\netco
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api\bin\Debug\netcoreapp3.1\Npgsql.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api\obj\Debug\netcoreapp3.1\erthsobes-api.csproj.CoreCompileInputs.cache
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api\obj\Debug\netcoreapp3.1\erthsobes-api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api\obj\Debug\netcoreapp3.1\erthsobes-api.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api\obj\Debug\netcoreapp3.1\erthsobes-api.pdb
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api\obj\Debug\netcoreapp3.1\erthsobes-api.genruntimeconfig.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api\obj\Debug\netcoreapp3.1\erthsobes-api.csproj.CoreCompileInputs.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api\obj\Debug\netcoreapp3.1\erthsobes-api.MvcApplicationPartsAssemblyInfo.cache

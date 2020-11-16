@@ -30,3 +30,6 @@ C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\erthsobes-api.pdb
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Npgsql.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Newtonsoft.Json.Bson.dll

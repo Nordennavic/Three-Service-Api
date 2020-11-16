@@ -10,12 +10,9 @@ using System.Net.Http.Headers;
 namespace erthsobesservice.Controllers
 {
     [ApiController]
+    [Route("api")]
     public partial class ServiceController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
 
         private readonly ILogger<ServiceController> _logger;
 
@@ -25,7 +22,7 @@ namespace erthsobesservice.Controllers
         }
 
         [HttpGet]
-        [Route("GetObjectInfo")]
+        [Route("GetObjectInfo/")]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public IActionResult GetObjectInfo([Bind("type")] string type)
@@ -37,28 +34,25 @@ namespace erthsobesservice.Controllers
                 {
                     case "phone":
                     case "0":
-                        {
-                            return (file is null) ?
-                                Ok(new { dataType = "phone", data = new { Id = Guid.NewGuid(), Cost = GetCost(), Phone = "89220333338" } })
-                            :
-                                Ok(new { dataType = "phone", data = new { Id = Guid.NewGuid(), Cost = GetCost(), Phone = "89220333338", File = file } });
-                        }
 
+                        return (file is null) ?
+                            Ok(new { dataType = "phone", data = new { Id = Guid.NewGuid(), Cost = GetCost(), Phone = "89220333338" } })
+                        :
+                            Ok(new { dataType = "phone", data = new { Id = Guid.NewGuid(), Cost = GetCost(), Phone = "89220333338", File = file } });
 
                     case "email":
                     case "1":
-                        {
-                            return (file is null) ?
-                                Ok(new { dataType = "email", data = new { Id = Guid.NewGuid(), Cost = GetCost(), Email = "test@test.com" } })
-                                :
-                                Ok(new { dataType = "email", data = new { Id = Guid.NewGuid(), Cost = GetCost(), Email = "test@test.com", File = file } });
-                        }
+
+                        return (file is null) ?
+                            Ok(new { dataType = "email", data = new { Id = Guid.NewGuid(), Cost = GetCost(), Email = "test@test.com" } })
+                            :
+                            Ok(new { dataType = "email", data = new { Id = Guid.NewGuid(), Cost = GetCost(), Email = "test@test.com", File = file } });
 
                     default:
                         return (file is null) ?
                             Ok(new { dataType = type, data = new { Id = Guid.NewGuid(), Cost = GetCost(), Value = "Описание объекта" } })
                             :
-                            Ok(new { dataType = type, data = new { Id = Guid.NewGuid(), Cost = GetCost(), Value = "Описание объекта", File = GetFile() } });
+                            Ok(new { dataType = type, data = new { Id = Guid.NewGuid(), Cost = GetCost(), Value = "Описание объекта", File = file } });
                 }
             }
             catch (Exception e)
@@ -68,7 +62,7 @@ namespace erthsobesservice.Controllers
         }
 
         [HttpPost]
-        [Route("GetFile")]
+        [Route("GetFile/")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.Forbidden)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
@@ -95,7 +89,7 @@ namespace erthsobesservice.Controllers
                 result.Content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
                 return result;
             }
-            catch (Exception e)
+            catch
             {
                 return new HttpResponseMessage(HttpStatusCode.InternalServerError);
             }

@@ -7,7 +7,7 @@ namespace erthsobes_api.Model
     public class Attachment
     {
         [Key]
-        public long id;
-        public string hash;
+        public long id { get; set; }
+        public string hash { get; set; }
     }
 }

@@ -29,7 +29,8 @@ namespace erthsobes_api
         {
             services.AddControllers();
             services.AddDbContext<OrdersContext>(options => 
-            options.UseNpgsql("Host=localhost;Port=5432;Database=orders;Username=orders;Password=orders", b => b.MigrationsAssembly("erthsobes_api")));
+            options.UseNpgsql("Host=172.23.0.2;Port=5432;Database=orders;Username=orders;Password=orders", b => b.MigrationsAssembly("erthsobes_api")));
+            services.AddScoped<DataAccessProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

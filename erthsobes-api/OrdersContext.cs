@@ -25,12 +25,12 @@ namespace erthsobes_api
 
         public OrdersContext(DbContextOptions<OrdersContext> options) :base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=orders;Username=orders;Password=orders");
+            optionsBuilder.UseNpgsql("Host=172.23.0.4;Port=5432;Database=orders;Username=orders;Password=orders");
         }
     }
 }

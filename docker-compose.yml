@@ -13,6 +13,9 @@ services:
       dockerfile: erthsobesservice/Dockerfile
     ports:
       - "6500:6500"
+    networks:
+      - my-network
+
 #База данных
   erthsobes-db:
     image: erthsobes/erthsobes-db
@@ -29,6 +32,9 @@ services:
       - .db:/var/lib/postgresql/data:rw
     ports:
       - "5432:5432"
+    networks:
+      - my-network
+
 #Api для взаимодействия с базой данных
   erthsobes-api:
     image: erthsobes/erthsobes-api
@@ -41,5 +47,9 @@ services:
       dockerfile: erthsobes-api/Dockerfile
     ports:
       - "6570:6570"
+    networks:
+      - my-network
 
-
+networks:
+  my-network:
+    external: true

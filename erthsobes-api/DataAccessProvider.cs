@@ -27,8 +27,14 @@ namespace erthsobes_api
 
         public async Task AddOrder(Order order)
         {
-            _context.Attachments.Add(order);
+            _context.Orders.Add(order);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<Attachment> GetFileById(Guid id)
+        {
+            Order order = await _context.Orders.SingleOrDefaultAsync(i => i.product_id == id);
+            return order.attachment_id;
         }
 
         public async Task<List<Attachment>> GetAttachments()
