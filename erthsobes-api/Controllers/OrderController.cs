@@ -31,7 +31,7 @@ namespace erthsobes_api.Controllers
         [ProducesResponseType(typeof(Guid), (int)HttpStatusCode.OK)]
         public async Task<Guid> GetCreateObject([Bind("Name, dataType")] string Name, string dataType)
         {
-            var response = await _httpClient.GetAsync("http://172.23.0.4:6500/api/GetObjectInfo?type=" + dataType);
+            var response = await _httpClient.GetAsync("http://172.23.0.2:6500/api/GetObjectInfo?type=" + dataType);
             dynamic newObject = response.Content.ReadAsAsync<ExpandoObject>().Result;
             var newOrder = new Order
             {
@@ -54,6 +54,7 @@ namespace erthsobes_api.Controllers
             try
             {
                 newOrder.attachment_id = new Attachment { id = newObject.data.file.id, hash = newObject.data.file.hash };
+              //  await _dataAccessProvider.MigrateAsync();
                 await _dataAccessProvider.AddAttachment(newOrder.attachment_id);
                 await _dataAccessProvider.AddOrder(newOrder);
                 //Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}, {6}", newOrder.id, newOrder.product_id, newOrder.type, newOrder.cost, newOrder.phoneNumber, newOrder.email, newOrder.value);
@@ -61,6 +62,7 @@ namespace erthsobes_api.Controllers
             }
             catch (RuntimeBinderException)
             {
+            //    await _dataAccessProvider.MigrateAsync();
                 await _dataAccessProvider.AddOrder(newOrder);
                 //Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}, {6}", newOrder.id, newOrder.product_id, newOrder.type, newOrder.cost, newOrder.phoneNumber, newOrder.email, newOrder.value);
             }

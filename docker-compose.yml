@@ -20,16 +20,9 @@ services:
   erthsobes-db:
     image: erthsobes/erthsobes-db
     environment:  
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:5432
-      - POSTGRES_USER=orders
-      - POSTGRES_PASSWORD=orders
-      - POSTGRES_DB=orders
-    build:
-      context: .
-      dockerfile: erthsobes-db/Dockerfile
-    volumes:
-      - .db:/var/lib/postgresql/data:rw
+      POSTGRES_USER: orders
+      POSTGRES_PASSWORD: orders
+      POSTGRES_DB: orders
     ports:
       - "5432:5432"
     networks:

@@ -37,6 +37,10 @@ namespace erthsobes_api
             return order.attachment_id;
         }
 
+        public async Task MigrateAsync()
+        {
+            await _context.Database.MigrateAsync();
+        }
         public async Task<List<Attachment>> GetAttachments()
         {
             // Using the shadow property EF.Property<DateTime>(dataEventRecord)
