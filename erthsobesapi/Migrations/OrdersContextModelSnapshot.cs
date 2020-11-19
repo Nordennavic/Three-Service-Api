@@ -26,10 +26,8 @@ namespace erthsobesapi.Migrations
                         .HasColumnType("bigint")
                         .UseIdentityByDefaultColumn();
 
-                    b.Property<DateTime>("UpdatedTimestamp")
-                        .HasColumnType("timestamp without time zone");
-
                     b.Property<string>("hash")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("id");
@@ -44,10 +42,7 @@ namespace erthsobesapi.Migrations
                         .HasColumnType("bigint")
                         .UseIdentityByDefaultColumn();
 
-                    b.Property<DateTime>("UpdatedTimestamp")
-                        .HasColumnType("timestamp without time zone");
-
-                    b.Property<long?>("attachment_idid")
+                    b.Property<long>("attachment_id")
                         .HasColumnType("bigint");
 
                     b.Property<decimal>("cost")
@@ -70,18 +65,7 @@ namespace erthsobesapi.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("attachment_idid");
-
                     b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("erthsobesapi.Model.Order", b =>
-                {
-                    b.HasOne("erthsobesapi.Model.Attachment", "attachment_id")
-                        .WithMany()
-                        .HasForeignKey("attachment_idid");
-
-                    b.Navigation("attachment_id");
                 });
 #pragma warning restore 612, 618
         }

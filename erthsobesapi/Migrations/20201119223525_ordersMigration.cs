@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace erthsobesapi.Migrations
 {
-    public partial class postgresqlMigration : Migration
+    public partial class ordersMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,8 +14,7 @@ namespace erthsobesapi.Migrations
                 {
                     id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    hash = table.Column<string>(type: "text", nullable: true),
-                    UpdatedTimestamp = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    hash = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -34,33 +33,21 @@ namespace erthsobesapi.Migrations
                     phoneNumber = table.Column<string>(type: "text", nullable: true),
                     email = table.Column<string>(type: "text", nullable: true),
                     value = table.Column<string>(type: "text", nullable: true),
-                    attachment_idid = table.Column<long>(type: "bigint", nullable: true),
-                    UpdatedTimestamp = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
+                    attachment_id = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Orders", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Orders_Attachments_attachment_idid",
-                        column: x => x.attachment_idid,
-                        principalTable: "Attachments",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Orders_attachment_idid",
-                table: "Orders",
-                column: "attachment_idid");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Orders");
+                name: "Attachments");
 
             migrationBuilder.DropTable(
-                name: "Attachments");
+                name: "Orders");
         }
     }
 }

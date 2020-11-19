@@ -1,4 +1,5 @@
 ﻿using erthsobesapi.Model;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
@@ -31,10 +32,24 @@ namespace erthsobesapi
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Attachment> GetFileById(Guid id)
+        public dynamic GetStats()
+        {
+            var phoneCount = _context.Orders.Where(p => p.type == "phone").Count();
+            var phoneCountWithFile = _context.Orders.Where(p => p.type == "phone").Where(p => p.attachment_id != 0).Count();
+            var topPhones = _context.Orders.Where(p => p.type == "phone").OrderByDescending(p => p.id).Take(1).ToArray();
+            var emailCount = _context.Orders.Where(p => p.type == "email").Count();
+            var emailCountWithFile = _context.Orders.Where(p => p.type == "email").Where(p => p.attachment_id != 0).Count();
+            var topEmails = _context.Orders.Where(p => p.type == "email").OrderByDescending(p => p.id).Take(1).ToArray();
+            var otherCount = _context.Orders.Where(p => p.type == "other").Count();
+            var otherCountWithFile = _context.Orders.Where(p => p.type == "other").Where(p => p.attachment_id != 0).Count();
+            return new { phoneCount, phoneCountWithFile, topPhones, emailCount, emailCountWithFile, topEmails, otherCount, otherCountWithFile };
+        }
+        public async Task<Order> GetFileById(Guid id)
         {
             Order order = await _context.Orders.SingleOrDefaultAsync(i => i.product_id == id);
-            return order.attachment_id;
+            if (order != null)
+                return order;
+            else return null;
         }
 
         public async Task<List<Attachment>> GetAttachments()

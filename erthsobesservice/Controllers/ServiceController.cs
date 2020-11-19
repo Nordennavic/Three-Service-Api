@@ -50,9 +50,9 @@ namespace erthsobesservice.Controllers
 
                     default:
                         return (file is null) ?
-                            Ok(new { dataType = type, data = new { Id = Guid.NewGuid(), Cost = GetCost(), Value = "Описание объекта" } })
+                            Ok(new { dataType = "other", data = new { Id = Guid.NewGuid(), Cost = GetCost(), Value = "Описание объекта" } })
                             :
-                            Ok(new { dataType = type, data = new { Id = Guid.NewGuid(), Cost = GetCost(), Value = "Описание объекта", File = file } });
+                            Ok(new { dataType = "other", data = new { Id = Guid.NewGuid(), Cost = GetCost(), Value = "Описание объекта", File = file } });
                 }
             }
             catch (Exception e)

@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace erthsobesapi.Model
 {
@@ -16,6 +14,7 @@ namespace erthsobesapi.Model
         public string phoneNumber { get; set; }
         public string email { get; set; }
         public string value { get; set; }
-        public Attachment attachment_id { get; set; }
+        [ForeignKey("Attachment")]
+        public long attachment_id { get; set; }
     }
 }

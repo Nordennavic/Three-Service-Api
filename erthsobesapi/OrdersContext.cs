@@ -1,9 +1,7 @@
 ﻿using erthsobesapi.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace erthsobesapi
 {
@@ -16,43 +14,19 @@ namespace erthsobesapi
         {
             builder.Entity<Order>().HasKey(m => m.id);
             builder.Entity<Attachment>().HasKey(m => m.id);
-
-            //builder.Entity<Order>().Property<DateTime>("UpdatedTimestamp");
-            //builder.Entity<Attachment>().Property<DateTime>("UpdatedTimestamp");
-
+            builder.Entity<Attachment>()
+                .Property(m => m.hash).IsRequired();
             base.OnModelCreating(builder);
         }
 
         public OrdersContext(DbContextOptions<OrdersContext> options) : base(options)
         {
-            //Database.EnsureCreated();
         }
 
         public override int SaveChanges()
         {
             ChangeTracker.DetectChanges();
-
-            //updateUpdatedProperty<Order>();
-            //updateUpdatedProperty<Attachment>();
-
             return base.SaveChanges();
         }
-
-        private void updateUpdatedProperty<T>() where T : class
-        {
-            var modifiedSourceInfo =
-                ChangeTracker.Entries<T>()
-                    .Where(e => e.State == EntityState.Added || e.State == EntityState.Modified);
-
-            foreach (var entry in modifiedSourceInfo)
-            {
-                entry.Property("UpdatedTimestamp").CurrentValue = DateTime.UtcNow;
-            }
-        }
-
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseNpgsql("Host=172.23.0.4;Port=5432;Database=orders;Username=orders;Password=orders");
-        //}
     }
 }
