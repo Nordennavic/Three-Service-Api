@@ -1,20 +1,20 @@
 version: '3.8'
 
 services:
-  erthsobes-api:
-    image: erthsobes/erthsobes-api:dev
-    container_name: erthsobes-api_1
+  erthsobesapi:
+    image: erthsobes/erthsobesapi:dev
+    container_name: erthsobesapi_1
     build:
       target: base
       labels:
         com.microsoft.created-by: "visual-studio"
-        com.microsoft.visual-studio.project-name: "erthsobes-api"
+        com.microsoft.visual-studio.project-name: "erthsobesapi"
     environment:
       - DOTNET_USE_POLLING_FILE_WATCHER=1
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
       - NUGET_FALLBACK_PACKAGES=
     volumes:
-      - C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-api:/app
+      - C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi:/app
       - C:\Users\Denis\Documents\GitHub\Three-Services-Api:/src
       - C:\Users\Denis\vsdbg\vs2017u5:/remote_debugger:rw
       - C:\Users\Denis\.nuget\packages\:/root/.nuget/packages:ro
@@ -24,7 +24,7 @@ services:
     entrypoint: tail -f /dev/null
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/netcoreapp3.1/erthsobes-api.dll\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/netcoreapp3.1/erthsobesapi.dll\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true

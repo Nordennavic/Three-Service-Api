@@ -29,15 +29,15 @@ services:
       - my-network
 
 #Api для взаимодействия с базой данных
-  erthsobes-api:
-    image: erthsobes/erthsobes-api
+  erthsobesapi:
+    image: erthsobes/erthsobesapi
     environment:
       - DOTNET_RUNNING_IN_CONTAINER=true
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:6570
     build:
       context: .
-      dockerfile: erthsobes-api/Dockerfile
+      dockerfile: erthsobesapi/Dockerfile
     ports:
       - "6570:6570"
     networks:
