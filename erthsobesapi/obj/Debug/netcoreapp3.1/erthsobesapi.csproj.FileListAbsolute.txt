@@ -1,7 +1,3 @@
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.csproj.CoreCompileInputs.cache
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.AssemblyInfoInputs.cache
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.AssemblyInfo.cs
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -33,7 +29,10 @@ C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcor
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.csprojAssemblyReference.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.csproj.CoreCompileInputs.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.AssemblyInfoInputs.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.AssemblyInfo.cs
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.RazorTargetAssemblyInfo.cache
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.csproj.CopyComplete
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\staticwebassets\erthsobesapi.StaticWebAssets.Manifest.cache
@@ -41,3 +40,4 @@ C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcor
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.pdb
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.genruntimeconfig.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.csprojAssemblyReference.cache

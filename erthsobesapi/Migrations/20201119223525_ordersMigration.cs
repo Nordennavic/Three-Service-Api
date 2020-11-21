@@ -9,7 +9,7 @@ namespace erthsobesapi.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Attachments",
+                name: "attachments",
                 columns: table => new
                 {
                     id = table.Column<long>(type: "bigint", nullable: false)
@@ -18,11 +18,11 @@ namespace erthsobesapi.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Attachments", x => x.id);
+                    table.PrimaryKey("PK_attachments", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Orders",
+                name: "order_info",
                 columns: table => new
                 {
                     id = table.Column<long>(type: "bigint", nullable: false)
@@ -37,17 +37,17 @@ namespace erthsobesapi.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Orders", x => x.id);
+                    table.PrimaryKey("PK_order_info", x => x.id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Attachments");
+                name: "attachments");
 
             migrationBuilder.DropTable(
-                name: "Orders");
+                name: "order_info");
         }
     }
 }

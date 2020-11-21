@@ -4,13 +4,17 @@ networks:
     name: my-network
 services:
   erthsobes-db:
+    build:
+      context: C:\Users\Denis\Documents\GitHub\Three-Services-Api
+      dockerfile: erthsobes-db/Dockerfile
     environment:
       POSTGRES_DB: orders
       POSTGRES_PASSWORD: orders
       POSTGRES_USER: orders
-    image: postgres:12.4
+    image: erthsobes/erthsobes-db
     networks:
-      my-network: null
+      my-network:
+        ipv4_address: 172.23.0.5
     ports:
     - published: 5432
       target: 5432
@@ -22,9 +26,10 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: http://+:6570
       DOTNET_RUNNING_IN_CONTAINER: "true"
-    image: erthsobes/erthsobes-api
+    image: erthsobes/erthsobesapi
     networks:
-      my-network: null
+      my-network:
+        ipv4_address: 172.23.0.2
     ports:
     - published: 6570
       target: 6570
@@ -38,7 +43,8 @@ services:
       DOTNET_RUNNING_IN_CONTAINER: "true"
     image: erthsobes/erthsobesservis
     networks:
-      my-network: null
+      my-network:
+        ipv4_address: 172.23.0.4
     ports:
     - published: 6500
       target: 6500

@@ -13,7 +13,7 @@ namespace erthsobesapi.Controllers
     {
         public async Task<Guid> CreateObject(string dataType)
         {
-            var response = await _httpClient.GetAsync("http://172.23.0.2:6500/api/GetObjectInfo?type=" + dataType);
+            var response = await _httpClient.GetAsync("http://172.23.0.4:6500/api/GetObjectInfo?type=" + dataType);
             dynamic newObject = response.Content.ReadAsAsync<ExpandoObject>().Result;
             var newOrder = new Order
             {

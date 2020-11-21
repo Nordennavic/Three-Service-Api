@@ -36,13 +36,30 @@ namespace erthsobesapi
         {
             var phoneCount = _context.Orders.Where(p => p.type == "phone").Count();
             var phoneCountWithFile = _context.Orders.Where(p => p.type == "phone").Where(p => p.attachment_id != 0).Count();
-            var topPhones = _context.Orders.Where(p => p.type == "phone").OrderByDescending(p => p.id).Take(1).ToArray();
+            var topPhones = ToFormat(_context.Orders.Where(p => p.type == "phone").OrderByDescending(p => p.id).Take(10).ToArray());
             var emailCount = _context.Orders.Where(p => p.type == "email").Count();
             var emailCountWithFile = _context.Orders.Where(p => p.type == "email").Where(p => p.attachment_id != 0).Count();
-            var topEmails = _context.Orders.Where(p => p.type == "email").OrderByDescending(p => p.id).Take(1).ToArray();
+            var topEmails = ToFormat(_context.Orders.Where(p => p.type == "email").OrderByDescending(p => p.id).Take(10).ToArray());
             var otherCount = _context.Orders.Where(p => p.type == "other").Count();
             var otherCountWithFile = _context.Orders.Where(p => p.type == "other").Where(p => p.attachment_id != 0).Count();
             return new { phoneCount, phoneCountWithFile, topPhones, emailCount, emailCountWithFile, topEmails, otherCount, otherCountWithFile };
+        }
+
+        private string ToFormat(Order[] topOrders)
+        {
+            string top = "";
+            if (topOrders[0].type == "phone")
+            {
+                foreach (var ord in topOrders)
+                    top += ord.phoneNumber + ";";
+            }
+            else
+            {
+                foreach (var ord in topOrders)
+                    top += ord.email + ";";
+            }
+            return top;
+
         }
         public async Task<Order> GetFileById(Guid id)
         {
