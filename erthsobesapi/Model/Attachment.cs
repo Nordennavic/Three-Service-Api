@@ -1,7 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace erthsobesapi.Model
 {
+    [Serializable]
     public class Attachment
     {
         [Key]

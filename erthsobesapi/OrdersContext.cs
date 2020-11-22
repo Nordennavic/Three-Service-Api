@@ -7,7 +7,7 @@ namespace erthsobesapi
 {
     public class OrdersContext : DbContext
     {
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<Order> Order_info { get; set; }
         public DbSet<Attachment> Attachments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

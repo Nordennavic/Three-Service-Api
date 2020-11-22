@@ -9,6 +9,7 @@ WORKDIR /src
 COPY ["erthsobesapi/erthsobesapi.csproj", "erthsobesapi/"]
 RUN dotnet restore "erthsobesapi/erthsobesapi.csproj"
 COPY . .
+
 WORKDIR "/src/erthsobesapi"
 RUN dotnet build "erthsobesapi.csproj" -c Release -o /app/build
 
@@ -19,3 +20,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "erthsobesapi.dll"]
+

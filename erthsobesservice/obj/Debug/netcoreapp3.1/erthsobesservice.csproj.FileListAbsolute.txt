@@ -16,8 +16,7 @@ C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\ne
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\netcoreapp3.1\erthsobesservice.runtimeconfig.dev.json
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\netcoreapp3.1\erthsobesservice.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\netcoreapp3.1\erthsobesservice.pdb
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.csproj.CoreCompileInputs.cache
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.csprojAssemblyReference.cache
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.AssemblyInfoInputs.cache
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.AssemblyInfo.cs
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.RazorTargetAssemblyInfo.cache
@@ -26,4 +25,5 @@ C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\ne
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.pdb
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.genruntimeconfig.cache
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.csprojAssemblyReference.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.csproj.CopyComplete

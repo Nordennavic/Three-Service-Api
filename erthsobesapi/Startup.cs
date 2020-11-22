@@ -21,7 +21,7 @@ namespace erthsobesapi
         {
             services.AddControllers();
             services.AddDbContext<OrdersContext>(options =>
-            options.UseNpgsql("Host=localhost;Port=5432;Database=orders;Username=orders;Password=orders", b => b.MigrationsAssembly("erthsobesapi")));
+            options.UseNpgsql("Host=172.23.0.5;Port=5432;Database=orders;Username=orders;Password=orders", b => b.MigrationsAssembly("erthsobesapi")));
             services.AddScoped<DataAccessProvider>();
         }
         //172.23.0.5

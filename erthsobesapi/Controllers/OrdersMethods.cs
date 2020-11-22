@@ -3,14 +3,28 @@ using Microsoft.CSharp.RuntimeBinder;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
+using Newtonsoft.Json;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading.Tasks;
+using System.Text;
 
 namespace erthsobesapi.Controllers
 {
     public partial class OrderController
     {
+        public static MemoryStream SerializeToStream(object o)
+        {
+            var json = JsonConvert.SerializeObject(o);
+            //MemoryStream stream = new MemoryStream();
+            //IFormatter formatter = new BinaryFormatter();
+            //formatter.Serialize(stream, o);
+            return new MemoryStream(Encoding.UTF8.GetBytes(json ?? ""));
+        }
+
         public async Task<Guid> CreateObject(string dataType)
         {
             var response = await _httpClient.GetAsync("http://172.23.0.4:6500/api/GetObjectInfo?type=" + dataType);

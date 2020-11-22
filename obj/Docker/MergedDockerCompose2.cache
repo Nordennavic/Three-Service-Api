@@ -3,6 +3,21 @@ networks:
     external: true
     name: my-network
 services:
+  erthsobes-db:
+    build:
+      context: C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobes-db
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_DB: orders
+      POSTGRES_PASSWORD: orders
+      POSTGRES_USER: orders
+    image: erthsobes/erthsobes-db
+    networks:
+      my-network:
+        ipv4_address: 172.23.0.5
+    ports:
+    - published: 5432
+      target: 5432
   erthsobesapi:
     build:
       context: C:\Users\Denis\Documents\GitHub\Three-Services-Api
@@ -18,21 +33,6 @@ services:
     ports:
     - published: 6570
       target: 6570
-  erthsobesdb:
-    build:
-      context: C:\Users\Denis\Documents\GitHub\Three-Services-Api
-      dockerfile: erthsobes-db/Dockerfile
-    environment:
-      POSTGRES_DB: orders
-      POSTGRES_PASSWORD: orders
-      POSTGRES_USER: orders
-    image: erthsobes/erthsobesdb
-    networks:
-      my-network:
-        ipv4_address: 172.23.0.5
-    ports:
-    - published: 5432
-      target: 5432
   erthsobesservice:
     build:
       context: C:\Users\Denis\Documents\GitHub\Three-Services-Api

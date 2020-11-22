@@ -32,7 +32,7 @@ namespace erthsobesapi.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("attachments");
+                    b.ToTable("Attachments");
                 });
 
             modelBuilder.Entity("erthsobesapi.Model.Order", b =>
@@ -65,7 +65,7 @@ namespace erthsobesapi.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("order_info");
+                    b.ToTable("Order_info");
                 });
 #pragma warning restore 612, 618
         }

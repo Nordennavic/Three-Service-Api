@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Dynamic;
+using System.IO;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using erthsobesapi.Model;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CSharp.RuntimeBinder;
+using System.Text.RegularExpressions;
 using Microsoft.Extensions.Logging;
+using System.Net.Mime;
 
 namespace erthsobesapi.Controllers
 {
@@ -41,14 +44,20 @@ namespace erthsobesapi.Controllers
 
         [HttpGet]
         [Route("GetFileById/")]
-        [ProducesResponseType(typeof(long), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        public async Task<IActionResult> GetObjectById([Bind("id")] Guid id)
+
+        public async Task<ActionResult> GetObjectById([Bind("id")] Guid id)
         {
             var result = await _dataAccessProvider.GetFileById(id);
             if (result != null)
                 if (result.attachment_id != 0)
-                    return Ok(result.attachment_id);
+                {
+                    Attachment attachment = await _dataAccessProvider.GetAttachment(result.attachment_id);
+                    MemoryStream stream = SerializeToStream(attachment);
+                    byte[] vs = stream.ToArray();
+                    return File(vs, "application/json", result.attachment_id.ToString() + ".json");
+                }
                 else return NotFound("У запрашиваемого объекта отсутствует файл.");
             else return NotFound("Запрашиваемый объект не найден.");
         }
