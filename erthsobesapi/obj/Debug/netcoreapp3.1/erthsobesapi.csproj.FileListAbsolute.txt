@@ -39,5 +39,15 @@ C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcor
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.pdb
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.genruntimeconfig.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcoreapp3.1\erthsobesapi.xml
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.xml
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\bin\Debug\netcoreapp3.1\Swashbuckle.Core.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.csproj.CoreCompileInputs.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesapi\obj\Debug\netcoreapp3.1\erthsobesapi.MvcApplicationPartsAssemblyInfo.cache

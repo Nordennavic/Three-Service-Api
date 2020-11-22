@@ -27,3 +27,16 @@ C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\ne
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.genruntimeconfig.cache
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.csproj.CopyComplete
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\netcoreapp3.1\Swashbuckle.Core.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Annotations.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.csproj.CoreCompileInputs.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\bin\Debug\netcoreapp3.1\erthsobesservice.xml
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\erthsobesservice\obj\Debug\netcoreapp3.1\erthsobesservice.xml

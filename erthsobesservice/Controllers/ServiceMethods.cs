@@ -1,4 +1,5 @@
 ﻿using erthsobesservice.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,11 +18,10 @@ namespace erthsobesservice.Controllers
     {
         public static MemoryStream SerializeToStream(object o)
         {
-            MemoryStream stream = new MemoryStream();
-            IFormatter formatter = new BinaryFormatter();
-            formatter.Serialize(stream, o);
-            return stream;
+            var json = JsonConvert.SerializeObject(o);
+            return new MemoryStream(Encoding.UTF8.GetBytes(json ?? ""));
         }
+
         public static bool IsMD5(string hash)
         {
             if (string.IsNullOrEmpty(hash)) return false;

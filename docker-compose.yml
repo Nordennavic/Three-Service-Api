@@ -4,7 +4,36 @@ services:
 
 #Сторонняя система
 
+  erthsobesservice:
+    image: erthsobes/erthsobesservis
+    environment:
+      - DOTNET_RUNNING_IN_CONTAINER=true
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:6500
+    build:
+      context: .
+      dockerfile: erthsobesservice/Dockerfile
+    ports:
+      - "6500:6500"
+    networks:
+       my-network:
+          ipv4_address: 172.23.0.4
 
+#База данных
+  erthsobes-db:
+    image: erthsobes/erthsobes-db
+    environment:  
+      - POSTGRES_USER=orders
+      - POSTGRES_PASSWORD=orders
+      - POSTGRES_DB=orders
+    build:
+      context: ./erthsobes-db
+      dockerfile: Dockerfile
+    ports:
+      - "5432:5432"
+    networks:
+       my-network:
+          ipv4_address: 172.23.0.5
 
 #Api для взаимодействия с базой данных
   erthsobesapi:

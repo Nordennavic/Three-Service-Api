@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>erthsobesservice</name>
+    </assembly>
+    <members>
+        <member name="M:erthsobesservice.Controllers.ServiceController.GetObjectInfo(System.String)">
+             <summary>
+             Возвращает информацию об объекте, по его типу
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET http://{host}:{port}/api/GetObjectInfo?type=phone
+            
+             </remarks>
+             <param name="type">
+             Тип запрашиваемого объекта: phone, email или 0, 1.
+             Все, что не относится к перечисленному, будет отнесено к типу "other".
+             </param>
+             <returns></returns>
+             <response code="200">
+                {
+                     "dataType":"phone",
+                     "data":
+                     "{
+                         \"PhoneNumber\":\"89392975637\",
+                         \"Id\":\"34b57891-71ce-43e7-b49f-b243d7f851e6\",
+                         \"Cost\":79.58
+                      }"
+                 }
+             </response>
+             <response code="500">
+                {
+                     "dataType":"",
+                     "data":
+                     "{
+                         \"Value\":\"\",
+                         \"Id\":\"\",
+                         \"Cost\":\"\"
+                      }"
+                      "error":"Описание ошибки"
+                 }
+             </response>
+        </member>
+        <member name="M:erthsobesservice.Controllers.ServiceController.GetFile(erthsobesservice.Model.Attachment)">
+             <summary>
+             Возвращает файл по Id файла и hash.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST http://{host}:{port}/Api/GetFile
+                 {
+                     "id":1,
+                     "hash":"c8293c1122925a4a56ef572d280ffe587f5f003917b621b3166ab0bce438a793"
+                 }
+             </remarks>
+             <param>
+                 {
+                     "id":1,
+                     "hash":"c8293c1122925a4a56ef572d280ffe587f5f003917b621b3166ab0bce438a793"
+                 }
+             </param>
+             <returns>Возвращает поток с данными file</returns>
+             
+        </member>
+    </members>
+</doc>

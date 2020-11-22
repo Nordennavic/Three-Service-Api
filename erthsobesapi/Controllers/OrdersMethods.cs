@@ -16,16 +16,13 @@ namespace erthsobesapi.Controllers
 {
     public partial class OrderController
     {
-        public static MemoryStream SerializeToStream(object o)
+        private static MemoryStream SerializeToStream(object o)
         {
             var json = JsonConvert.SerializeObject(o);
-            //MemoryStream stream = new MemoryStream();
-            //IFormatter formatter = new BinaryFormatter();
-            //formatter.Serialize(stream, o);
             return new MemoryStream(Encoding.UTF8.GetBytes(json ?? ""));
         }
 
-        public async Task<Guid> CreateObject(string dataType)
+        private async Task<Guid> CreateObject(string dataType)
         {
             var response = await _httpClient.GetAsync("http://172.23.0.4:6500/api/GetObjectInfo?type=" + dataType);
             dynamic newObject = response.Content.ReadAsAsync<ExpandoObject>().Result;

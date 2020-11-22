@@ -1,6 +1,11 @@
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\appsettings.Development.json
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\appsettings.json
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Properties\launchSettings.json
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\obj\Debug\docker-compose.dcprojAssemblyReference.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\System.Net.Http.Formatting.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\erthsobesapi.exe
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\erthsobesapi.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
@@ -10,7 +15,6 @@ C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Microsoft.Extension
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\System.ComponentModel.Annotations.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\System.Net.Http.Formatting.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\System.Collections.Immutable.dll
@@ -21,9 +25,10 @@ C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Microsoft.Extension
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Microsoft.Extensions.Options.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Microsoft.Extensions.Primitives.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Npgsql.dll
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Newtonsoft.Json.Bson.dll
 C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\erthsobesapi.pdb
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\obj\Debug\docker-compose.dcprojAssemblyReference.cache
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
-C:\Users\Denis\Documents\GitHub\Three-Services-Api\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\Microsoft.OpenApi.dll
+C:\Users\Denis\Documents\GitHub\Three-Services-Api\bin\Debug\erthsobesapi.xml

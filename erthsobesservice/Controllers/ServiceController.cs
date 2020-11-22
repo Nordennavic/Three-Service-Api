@@ -6,6 +6,8 @@ using erthsobesservice.Model;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using Swashbuckle.Swagger.Annotations;
+using System.Text.Json.Serialization;
 
 namespace erthsobesservice.Controllers
 {
@@ -21,10 +23,47 @@ namespace erthsobesservice.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Возвращает информацию об объекте, по его типу
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     GET http://{host}:{port}/api/GetObjectInfo?type=phone
+        ///
+        /// </remarks>
+        /// <param name="type">
+        /// Тип запрашиваемого объекта: phone, email или 0, 1.
+        /// Все, что не относится к перечисленному, будет отнесено к типу "other".
+        /// </param>
+        /// <returns></returns>
+        /// <response code="200">
+        ///    {
+        ///         "dataType":"phone",
+        ///         "data":
+        ///         "{
+        ///             \"PhoneNumber\":\"89392975637\",
+        ///             \"Id\":\"34b57891-71ce-43e7-b49f-b243d7f851e6\",
+        ///             \"Cost\":79.58
+        ///          }"
+        ///     }
+        /// </response>
+        /// <response code="500">
+        ///    {
+        ///         "dataType":"",
+        ///         "data":
+        ///         "{
+        ///             \"Value\":\"\",
+        ///             \"Id\":\"\",
+        ///             \"Cost\":\"\"
+        ///          }"
+        ///          "error":"Описание ошибки"
+        ///     }
+        /// </response>
         [HttpGet]
         [Route("GetObjectInfo/")]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
-        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [SwaggerResponse(HttpStatusCode.InternalServerError)]
+        [SwaggerResponse(HttpStatusCode.OK, "Возвращает информацию об объекте, по его типу")]
         public IActionResult GetObjectInfo([Bind("type")] string type)
         {
             try
@@ -61,37 +100,47 @@ namespace erthsobesservice.Controllers
             }
         }
 
+        /// <summary>
+        /// Возвращает файл по Id файла и hash.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST http://{host}:{port}/Api/GetFile
+        ///     {
+        ///         "id":1,
+        ///         "hash":"c8293c1122925a4a56ef572d280ffe587f5f003917b621b3166ab0bce438a793"
+        ///     }
+        /// </remarks>
+        /// <param>
+        ///     {
+        ///         "id":1,
+        ///         "hash":"c8293c1122925a4a56ef572d280ffe587f5f003917b621b3166ab0bce438a793"
+        ///     }
+        /// </param>
+        /// <returns>Возвращает поток с данными file</returns>
+        /// 
         [HttpPost]
         [Route("GetFile/")]
-        [ProducesResponseType((int)HttpStatusCode.OK)]
-        [ProducesResponseType((int)HttpStatusCode.Forbidden)]
-        [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
-        public HttpResponseMessage GetFile([FromBody] Attachment file)
+        [SwaggerResponse(HttpStatusCode.OK, "Возвращает поток с данными file", typeof(Attachment))]
+        [SwaggerResponse(HttpStatusCode.Forbidden)]
+        [SwaggerResponse(HttpStatusCode.NotFound)]
+        [SwaggerResponse(HttpStatusCode.InternalServerError)]
+        public ActionResult GetFile([FromBody] Attachment file)
         {
             try
             {
                 if (file.id == 0 || file.hash == null)
-                    return new HttpResponseMessage(HttpStatusCode.NotFound);
+                    return StatusCode(404);
                 if (!IsMD5(file.hash))
-                    return new HttpResponseMessage(HttpStatusCode.Forbidden);
+                    return StatusCode(403);
                 MemoryStream stream = SerializeToStream(file);
-                Console.WriteLine(stream.ToArray());
-                var result = new HttpResponseMessage(HttpStatusCode.OK)
-                {
-                    Content = new ByteArrayContent(stream.ToArray())
-                };
-                result.Content.Headers.ContentDisposition =
-                    new ContentDispositionHeaderValue("attachment")
-                    {
-                        FileName = "file"
-                    };
-                result.Content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-                return result;
+                byte[] vs = stream.ToArray();
+                return File(vs, "application/json", file.id.ToString() + ".json");
             }
             catch
             {
-                return new HttpResponseMessage(HttpStatusCode.InternalServerError);
+                return StatusCode(500);
             }
         }
     }
